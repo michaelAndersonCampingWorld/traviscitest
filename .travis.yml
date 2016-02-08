@@ -1,6 +1,11 @@
-language: node_js
-  - "4.2"
+language: php
+	- "5.6"
+install:
+	- rm -rf vendor && composer install
 before_script:
-  - npm install -g gulp
+	- nvm install 4.2
+	- nvm use 4.2
+	- npm install -g gulp
+	- npm install
 script:
-  - echo "Built well with Peterbilt"
+	- echo "Built well with Peterbilt"
